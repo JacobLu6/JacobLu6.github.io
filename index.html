@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Jacob</title><meta name="author" content="陆雅各"><meta name="copyright" content="陆雅各"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="忘掉背后，努力面前，向着标杆直跑。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jacob">
+<meta property="og:url" content="https://jacoblu6.github.io/index.html">
+<meta property="og:site_name" content="Jacob">
+<meta property="og:description" content="忘掉背后，努力面前，向着标杆直跑。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://jacoblu6.github.io/images/%E5%A4%B4%E5%83%8F.jpg">
+<meta property="article:author" content="陆雅各">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jacoblu6.github.io/images/%E5%A4%B4%E5%83%8F.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jacoblu6.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":3,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Jacob',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/%E5%A4%B4%E5%83%8F.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/images/背景.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Jacob</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Jacob</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/8ccb358f/" title="列王纪：脉络梳理">列王纪：脉络梳理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-09T07:42:00.000Z" title="发表于 2025-05-09 15:42:00">2025-05-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%81%93%E4%B8%AD%E5%BB%BA%E9%80%A0/">道中建造</a></span></div><div class="content">《列王纪上》和《列王纪下》是《圣经·旧约》中的历史书卷，记录了以色列联合王国分裂后南国犹大和北国以色列诸王的历史，以及两国的信仰与政治兴衰。  《列王纪》背景与文本分析基本信息 希伯来语名称：ספר מלכים（Sefer Melachim） 成书时间：约公元前6世纪至前5世纪（被掳巴比伦后编撰完成） 文本结构： 原为《希伯来圣经》中一整卷，后希腊文译本（七十士译本）分为《列王纪上》《列王纪下》两卷。 分割依据：篇幅长度，无特殊神学意图。     内容概述 时间跨度：   起于公元前971年（大卫晚年，所罗门登基）   止于公元前562年（犹大王约雅斤被巴比伦释放，王下25:27）   核心主题：   展现以色列君王职分在神行政中的兴衰，强调神的公义审判与对背约的惩罚。   记录王国分裂（南国犹大与北国以色列）至两国灭亡的历史（北国亡于亚述前722年，南国亡于巴比伦前586年）。     成书背景与神学意图 历史预说的视角： ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/a0df1a67/" title="论救恩">论救恩</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-07T12:05:00.000Z" title="发表于 2025-05-07 20:05:00">2025-05-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%81%93%E4%B8%AD%E5%BB%BA%E9%80%A0/">道中建造</a></span></div><div class="content">“ 我们要在信心当中，借着道来亲近神。” 一、为父之心 多么希望儿女在父母身边去亲近他们。 子女对父的需求 ——...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/bee32e09/" title="3S训练体系 × 三大供能系统：打造科学体能课的“黄金公式“">3S训练体系 × 三大供能系统：打造科学体能课的“黄金公式“</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-19T03:11:26.000Z" title="发表于 2025-04-19 11:11:26">2025-04-19</time></span></div><div class="content">3S训练体系 × 三大供能系统：打造科学体能课的“黄金公式”——速度、力量、耐力如何精准匹配你的能量引擎？  前言这篇文章主要理清楚“三大供能”系统在指导体能训练的过程中的实际意义之所在，说白了，了解了这个知识点之后它给我们的最实在的益处点在哪里？当然每个人的看见都是不一样的，所以大家可以相互交流。最近学习了陆鹏教练的3S训练体系，了解了这个后我们就知道所谓的3S训练也是从我们身体运转的底层逻辑总结出来的。 一、3S训练体系的本质：速度、力量、耐力与供能系统的“三角关系”3S训练体系（速度-Speed、力量-Strength、耐力-Stamina）与三大供能系统的关联并非简单的一一对应，而是动态协同：    速度训练：依赖磷酸原系统（短时爆发），但需要神经驱动； ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/503970b4/" title="全网最全！弹力带教程合集！30个动作任你选">全网最全！弹力带教程合集！30个动作任你选</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-03-15T14:55:10.000Z" title="发表于 2025-03-15 22:55:10">2025-03-15</time></span></div><div class="content">       </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/4b4da592/" title="小D给我了一个体能师成长计划~">小D给我了一个体能师成长计划~</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-03-02T11:21:46.000Z" title="发表于 2025-03-02 19:21:46">2025-03-02</time></span></div><div class="content">第一阶段：基础扎根（第1-8周）目标：掌握体能训练底层逻辑，能独立完成基础动作教学。 第1-2周：运动解剖学入门 每日任务（1小时）   学习《运动解剖学图谱》重点章节（每天10页，标记肌肉起止点）。   用手机App「3D Body」观察骨骼肌肉3D模型（每天15分钟）。   实践任务   对着镜子或同伴，用手触摸并说出以下部位：   股四头肌（四个头）、腘绳肌（半腱肌&#x2F;半膜肌&#x2F;股二头肌）、肩袖肌群（冈上肌&#x2F;冈下肌&#x2F;小圆肌&#x2F;肩胛下肌）。   录制自己讲解「深蹲时髋膝踝联动」的1分钟短视频（发给同行反馈）。     第3-4周：基础动作模式学习 每日任务（1.5小时）   学习《Starting Strength》（马克·瑞比托）中的六大杠铃动作：深蹲、硬拉、卧推、推举、力量翻、高翻。   观看YouTube频道「Alan Thrall」的动作教学（重点看深蹲和硬拉）。   实践任务   在健身房用空杠铃练习动作（每天1个动作，重复20次）：   第3周：深蹲（关注膝盖外展、重心在足中） ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/9a106981/" title="生活札记①">生活札记①</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-02T12:55:00.000Z" title="发表于 2025-02-02 20:55:00">2025-02-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%AE%B0/">生活札记</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2480893486/" title="所谓的“前侧链”和“后侧链”？">所谓的“前侧链”和“后侧链”？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-01T03:18:00.000Z" title="发表于 2025-02-01 11:18:00">2025-02-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83/">体能训练</a></span></div><div class="content">🌟 一句话总结前侧链 &#x3D; 身体前部的肌肉群，负责**“推”和向前发力**（如胸肌、腹肌、大腿前侧） 后侧链 &#x3D; 身体背部的肌肉群，负责**“拉”和向后稳定**（如臀肌、背肌、大腿后侧） 两者像弹簧与绳子：前链像压缩的弹簧（爆发力），后链像绷紧的绳子（稳定性）。 🎯 前侧链与后侧链的详细对比1. 肌肉组成与功能   类别 前侧链（Anterior Chain） 后侧链（Posterior...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/1639776941/" title="运动分为“开链”和“闭链”？">运动分为“开链”和“闭链”？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-01T02:43:00.000Z" title="发表于 2025-02-01 10:43:00">2025-02-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83/">体能训练</a></span></div><div class="content">🌟 一句话总结版开链运动 &#x3D; 手脚能自由甩动（如踢球） 闭链运动 &#x3D; 手脚固定住推&#x2F;拉东西（如俯卧撑） → 区别关键看手脚是否接触固定物体！ 🎯 超通俗版解释① 开链运动（Open Chain）——「自由挥动派」特点：你的手或脚在空中&#x2F;不固定，可以随便甩动 例子： 坐椅子上踢腿（脚在空中晃） 站着甩胳膊打拳 仰卧举哑铃（手举到空中） 发力感觉： → 像「甩流星锤」：主要练单独一块肌肉（比如股四头肌） → 关节压力小，适合康复早期 ② 闭链运动（Closed Chain）——「固定支点派」特点：你的手或脚接触固定物体（地面&#x2F;单杠等），身体移动。 例子： 深蹲（脚踩地，身体上下） 俯卧撑（手撑地，身体升降） 引体向上（手抓杠，身体拉高） 发力感觉： → 像「推卡车」：全身肌肉协同工作（比如深蹲时臀腿核心一起动） → 更接近日常动作，关节更稳定。 🧩...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/1289936510/" title="“理”一下什么是“末端释放”训练？">“理”一下什么是“末端释放”训练？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-01-30T12:18:00.000Z" title="发表于 2025-01-30 20:18:00">2025-01-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83/">体能训练</a></span></div><div class="content">🌟 一句话总结版末端释放训练 &#x3D;...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/%E5%A4%B4%E5%83%8F.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">陆雅各</div><div class="author-info-description">忘掉背后，努力面前，向着标杆直跑。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JacobLu6/JacobLu6.github.io"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/8ccb358f/" title="列王纪：脉络梳理">列王纪：脉络梳理</a><time datetime="2025-05-09T07:42:00.000Z" title="发表于 2025-05-09 15:42:00">2025-05-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/a0df1a67/" title="论救恩">论救恩</a><time datetime="2025-05-07T12:05:00.000Z" title="发表于 2025-05-07 20:05:00">2025-05-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/bee32e09/" title="3S训练体系 × 三大供能系统：打造科学体能课的“黄金公式“">3S训练体系 × 三大供能系统：打造科学体能课的“黄金公式“</a><time datetime="2025-04-19T03:11:26.000Z" title="发表于 2025-04-19 11:11:26">2025-04-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/503970b4/" title="全网最全！弹力带教程合集！30个动作任你选">全网最全！弹力带教程合集！30个动作任你选</a><time datetime="2025-03-15T14:55:10.000Z" title="发表于 2025-03-15 22:55:10">2025-03-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/4b4da592/" title="小D给我了一个体能师成长计划~">小D给我了一个体能师成长计划~</a><time datetime="2025-03-02T11:21:46.000Z" title="发表于 2025-03-02 19:21:46">2025-03-02</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83/"><span class="card-category-list-name">体能训练</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%AE%B0/"><span class="card-category-list-name">生活札记</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%81%93%E4%B8%AD%E5%BB%BA%E9%80%A0/"><span class="card-category-list-name">道中建造</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%88%97%E7%8E%8B%E7%BA%AA/" style="font-size: 1.1em; color: #999">列王纪</a> <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 1.1em; color: #999">碎碎念</a> <a href="/tags/%E8%AE%BA%E6%95%91%E6%81%A9/" style="font-size: 1.1em; color: #999">论救恩</a> <a href="/tags/%E7%A7%92%E6%87%82/" style="font-size: 1.5em; color: #99a9bf">秒懂</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              五月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/02/">
+            <span class="card-archive-list-date">
+              二月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">9</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-05-09T08:13:05.370Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By 陆雅各</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["忘掉背后 &#44; 努力面前 &#44; 向着标杆直跑。"])
+  } else {
+    document.getElementById("subtitle").textContent = "忘掉背后 &#44; 努力面前 &#44; 向着标杆直跑。"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
